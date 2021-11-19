@@ -153,7 +153,7 @@ const Scrubber: React.FC<{timelineWidth: number}> = ({timelineWidth}) => {
   }
 
   const scrubberStyle = css({
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     height: '240px',
     width: '1px',
     position: 'absolute' as 'absolute',
@@ -167,13 +167,14 @@ const Scrubber: React.FC<{timelineWidth: number}> = ({timelineWidth}) => {
 
   const scrubberDragHandleStyle = css({
     // Base style
-    background: "black",
+    background: "white",
+    color: "black",
     display: "inline-block",
     height: "10px",
     position: "relative",
     width: "20px",
     "&:after": {
-      borderTop: '10px solid black',
+      borderTop: '10px solid white',
       borderLeft: '10px solid transparent',
       borderRight: '10px solid transparent',
       content: '""',
@@ -201,7 +202,7 @@ const Scrubber: React.FC<{timelineWidth: number}> = ({timelineWidth}) => {
   const scrubberDragHandleIconStyle = css({
     transform: 'scaleY(0.7) rotate(90deg)',
     paddingRight: '5px',
-    color: "white"
+    color: "black"
   })
 
   // // Possible TODO: Find a way to use ariaLive in a way that only the latest change is announced

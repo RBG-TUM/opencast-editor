@@ -70,7 +70,7 @@ export const fetchMetadata = createAsyncThunk('metadata/fetchMetadata', async ()
     throw new Error("Missing media package identifier")
   }
 
-  const response = await client.get(`${settings.opencast.url}/editor/${settings.id}/metadata.json`)
+  const response = await client.get(`${settings.opencast.url}/metadata.json`)
   return response
 })
 
@@ -82,7 +82,7 @@ export const postMetadata = createAsyncThunk('metadata/postMetadata', async (_, 
   // TODO: Get only metadataState instead of all states
   const allStates = getState() as { metadataState: { catalogs: metadata["catalogs"] } }
 
-  const response = await client.post(`${settings.opencast.url}/editor/${settings.id}/metadata.json`,
+  const response = await client.post(`${settings.opencast.url}/metadata.json`,
     allStates.metadataState.catalogs
   )
 

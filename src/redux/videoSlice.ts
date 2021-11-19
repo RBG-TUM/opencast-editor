@@ -57,7 +57,7 @@ export const fetchVideoInformation = createAsyncThunk('video/fetchVideoInformati
   }
 
   // const response = await client.get('https://legacy.opencast.org/admin-ng/tools/ID-dual-stream-demo/editor.json')
-  const response = await client.get(`${settings.opencast.url}/editor/${settings.id}/edit.json`)
+  const response = await client.get(`${settings.opencast.url}/edit.json`)
   return response
 })
 

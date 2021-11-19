@@ -1,0 +1,39 @@
+{
+    "segments": [],
+    "workflows": [
+        {
+            "id": "publish",
+            "name": "Publish",
+            "displayOrder": 1000,
+            "description": ""
+        }
+    ],
+    "tracks": [
+        {
+            "audio_stream": {
+                "available": true,
+                "thumbnail_uri": null,
+                "enabled": true
+            },
+            "video_stream": {
+                "available": true,
+                "thumbnail_uri": null,
+                "enabled": true
+            },
+            "flavor": {
+                "type": "presenter",
+                "subtype": "preview"
+            },
+            "uri": "https://live.rbg.tum.de/public/bb.mp4",
+            "id": "1c01e7e7-f8e3-4e8f-8947-bab6f0eb7ae0"
+        }
+    ],
+    "title": "Dual-Stream Demo",
+    "date": "2021-11-19T01:03:00Z",
+    "duration": 64715,
+    "series": {
+        "id": null,
+        "title": null
+    },
+    "workflow_active": false
+}

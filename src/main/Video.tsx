@@ -391,7 +391,7 @@ const PlayButton: React.FC<{}> = () => {
   return (
     <>
     <GlobalHotKeys keyMap={cuttingKeyMap} handlers={mainMenuState === MainMenuStateNames.cutting ? handlers: {}} allowChanges={true} />
-    <FontAwesomeIcon css={[basicButtonStyle, {justifySelf: 'center'}]} icon={isPlaying ? faPause : faPlay} size="2x"
+    <FontAwesomeIcon css={[basicButtonStyle, {justifySelf: 'center', filter: 'invert()'}]} icon={isPlaying ? faPause : faPlay} size="2x"
       title={t("video.playButton-tooltip")}
       role="button" aria-pressed={isPlaying} tabIndex={0} aria-hidden={false}
       aria-label={t("video.playButton-tooltip")}

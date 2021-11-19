@@ -22,7 +22,8 @@ export const GlobalStyle: React.FC = () => {
 export const globalStyle = css({
   emotionNormalize,
   body: {
-    backgroundColor: 'snow',
+    color: "#fff",
+    backgroundColor: 'rgba(13,17,23,1)',
     fontSize: 'medium',
     // Makes the body span to the bottom of the page
     minHeight: "100vh",
@@ -72,6 +73,7 @@ export const flexGapReplacementStyle = (flexGapValue: number, flexDirectionIsRow
 export const basicButtonStyle = css({
   borderRadius: '10px',
   cursor: "pointer",
+  color: "black",
   // Animation
   transitionDuration: "0.3s",
   transitionProperty: "transform",
@@ -90,6 +92,7 @@ export const basicButtonStyle = css({
   alignItems: 'center',
   ...(flexGapReplacementStyle(10, false)),
   textAlign: 'center' as const,
+  backgroundColor: 'white',
 });
 
 /**

@@ -34,11 +34,17 @@ const MainMenu: React.FC<{}> = () => {
     flexShrink: 0,
     alignItems: 'center',
     padding: '20px',
+    backgroundColor: 'rgba(22,27,34,1)',
     ...(flexGapReplacementStyle(30, false)),
   });
 
   return (
     <nav css={mainMenuStyle} role="navigation" aria-label={t("mainMenu.tooltip-aria")}>
+      <a title="Start" href="/">
+            <svg width="100" height="54" viewBox="0 0 100 54" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#3070B3" d="M49.986,7v31h8V7h37v38h-7V14h-8v31h-7V14h-8v31h-22V14h-7v31h-7V14h-7V7H49.986z"></path>
+            </svg>
+        </a>
       <MainMenuButton iconName={faCut} stateName={MainMenuStateNames.cutting}/>
       {settings.metadata.show && <MainMenuButton iconName={faListUl} stateName={MainMenuStateNames.metadata}/>}
       {settings.trackSelection.show && <MainMenuButton iconName={faFilm} stateName={MainMenuStateNames.trackSelection}/>}

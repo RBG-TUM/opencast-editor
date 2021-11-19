@@ -132,10 +132,10 @@ Waveform.prototype = {
   },
   drawCanvasWaveform: function(amp) {
     amp = amp || 1;
-    this.ocCtx.fillStyle = '#FFFFFF00'; //'#b7d8f9';
+    this.ocCtx.fillStyle = '#FFFFFF00';
     this.ocCtx.fillRect(0, 0, this.WIDTH, this.HEIGHT);
     this.ocCtx.lineWidth = 1;
-    this.ocCtx.strokeStyle = 'black'; //'#38597a';
+    this.ocCtx.strokeStyle = 'white';
     let sliceWidth = this.WIDTH * 1.0 / this.channelData.length;
     let x = 0;
 
