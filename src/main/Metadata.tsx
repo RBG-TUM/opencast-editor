@@ -93,6 +93,10 @@ const Metadata: React.FC<{}> = () => {
     // maxWidth: '1500px',
     // margin: '10px',
     padding: '20px',
+    marginLeft:'auto',
+    marginRight:'auto',
+    minWidth: '50%',
+    display: 'grid',
   })
 
   const fieldStyle = css({
@@ -538,6 +542,7 @@ const Metadata: React.FC<{}> = () => {
             disabled={field.readOnly}
             dateFunsUtils={DateFnsUtils}
             showError={showErrorOnBlur}
+            autoOk={false}
           />
         </div>
       );
@@ -682,7 +687,7 @@ const Metadata: React.FC<{}> = () => {
                 return renderCatalog(catalog, i, {})
               })}
 
-{/* 
+{/*
                 <div css={{display: "block", wordWrap: "normal", whiteSpace: "pre"}}>{t("metadata.submit-helpertext", { buttonName: t("metadata.submit-button") })}</div>
 
 
