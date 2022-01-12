@@ -56,6 +56,7 @@ const TheEnd : React.FC<{}> = () => {
     <div css={theEndStyle} title="The End">
       <FontAwesomeIcon icon={icon()} size="10x" />
       <div>{text()}</div>
+      <div>Go back <a href="https://live.rbg.tum.de">home</a></div>
       {(endState === 'discarded') && <StartOverButton />}
     </div>
   );

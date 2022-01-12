@@ -29,7 +29,6 @@ const FinishMenu : React.FC<{}> = () => {
 
   return (
     <div css={finishMenuStyle}>
-        <FinishMenuButton iconName={faSave} stateName="Save changes"/>
         <FinishMenuButton iconName={faFileExport} stateName="Start processing"/>
         <FinishMenuButton iconName={faTimesCircle} stateName="Discard changes"/>
     </div>

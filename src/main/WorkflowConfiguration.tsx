@@ -89,8 +89,8 @@ export const SaveAndProcessButton: React.FC<{text: string}> = ({text}) => {
   // Subsequent save requests should be wrapped in useEffect hooks,
   // so they are only sent after the previous one has finished
   const saveAndProcess = () => {
-    setMetadataSaveStarted(true)
-    dispatch(postMetadata())
+    setMetadataSaveStarted(true);
+    dispatch(postMetadata());
   }
 
   // Subsequent save request

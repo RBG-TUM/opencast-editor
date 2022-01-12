@@ -69,7 +69,7 @@
       "discarded-text": "All your changes are now lost forever. You can now close the editor.",
       "startOver-button": "Let me start over!",
       "startOver-tooltip": "Reload the page to start over",
-      "info-text": "Changes successfully saved to Opencast. Processing your changes may take up to {{duration}} hours. You can now close the editor.\n"
+      "info-text": "Processing successfully started, it can take up to {{duration}} hours for this to complete. You can now close the editor.\n"
     },
 
     "workflowSelection": {

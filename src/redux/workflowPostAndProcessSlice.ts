@@ -15,8 +15,8 @@ export const postVideoInformationWithWorkflow = createAsyncThunk('video/postVide
     throw new Error("Missing media package identifier")
   }
 
-  const response = await client.post(`${settings.opencast.url}/editor/${settings.id}/edit.json`,
-    { segments: convertSegments(argument.segments), tracks: argument.tracks, workflows: argument.workflow }
+  const response = await client.post(`http://localhost:8081/metadata/editor/${settings.id}/edit.json`,
+    { segments: convertSegments(argument.segments) }
   )
   return response
 })
