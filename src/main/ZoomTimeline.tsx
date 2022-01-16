@@ -84,7 +84,7 @@ const ZoomTimeline: React.FC<{}> = () => {
 
   const zoomIndicatorStyle = css({
     position: 'absolute',
-    backgroundColor: '#FFFFFF80',
+    backgroundColor: '#5566FF',
     height: '100%',
     width: 100.0 / zoomMultiplicator + '%',
   })

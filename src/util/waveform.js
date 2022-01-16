@@ -26,18 +26,12 @@ export function Waveform(opts) {
   if (opts.width && opts.height) {
     this.setDimensions(opts.width, opts.height);
   }
-  if (opts.samples) {
-    this.numberSamples = opts.samples;
-  }
-  if (opts.type && opts.type === 'svg') {
-    this.waveformType = 'svg';
-    this.drawWaveform = this.delegateToWorker;
-    this.worker = null;
-  }
+  
+  this.drawWaveform();
   if (opts.media) {
     this.generateWaveform(opts.media)
       .then(() => {
-        this.getAudioData();
+        //this.getAudioData();
         this.drawWaveform();
         if (this.waveformType !== 'svg') {
           _completeFuncs.forEach(fn => {
@@ -127,10 +121,13 @@ Waveform.prototype = {
     })
   },
   getAudioData: function(buffer) {
+    return;
     buffer = buffer || this.buffer;
     this.channelData = this.dropSamples(buffer.getChannelData(0), this.numberSamples);
   },
   drawCanvasWaveform: function(amp) {
+    this.waveformImage = ``;
+    return;
     amp = amp || 1;
     this.ocCtx.fillStyle = '#FFFFFF00';
     this.ocCtx.fillRect(0, 0, this.WIDTH, this.HEIGHT);
@@ -161,6 +158,7 @@ Waveform.prototype = {
     return data.filter((sample, i) => i % divider === 0);
   },
   generateWaveform: function(arraybuffer) {
+    return new Promise((resolve, reject) => {});
     return this.decodeAudioData(arraybuffer);
   },
   delegateToWorker: function() {

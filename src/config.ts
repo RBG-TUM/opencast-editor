@@ -7,6 +7,7 @@
  */
 import parseToml from '@iarna/toml/parse-string';
 import deepmerge from 'deepmerge';
+import { compact } from 'lodash';
 
 /**
  * Local constants
@@ -44,7 +45,8 @@ interface iSettings {
   },
   thumbnail: {
     show: boolean,
-  }
+  },
+  stream:number,
 }
 
 /**
@@ -70,7 +72,8 @@ var defaultSettings: iSettings = {
   },
   thumbnail: {
     show: false,
-  }
+  },
+  stream: 0,
 }
 var configFileSettings: iSettings
 var urlParameterSettings: iSettings
@@ -282,6 +285,13 @@ const types = {
         }
       }
     }
+  },
+  'number': (v: any, allowParse: any) => {
+    // convert to number
+    let num = Number(v);
+    if (typeof num !== 'number') {
+      throw new Error("is not a number, but should be");
+    }
   }
 };
 
@@ -311,7 +321,8 @@ const SCHEMA = {
   },
   thumbnail: {
     show : types.boolean,
-  }
+  },
+  stream: types.number,
 }
 
 const merge = (a: iSettings, b: iSettings) => {

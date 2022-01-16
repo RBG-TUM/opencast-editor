@@ -63,7 +63,7 @@ export const fetchVideoInformation = createAsyncThunk('video/fetchVideoInformati
   }
 
   // const response = await client.get('https://legacy.opencast.org/admin-ng/tools/ID-dual-stream-demo/editor.json')
-  const response = await client.get(`${settings.opencast.url}/edit.json`)
+  const response = await client.get(`${settings.opencast.url}/edit.json?stream=${settings.stream}`)
   return response
 })
 
@@ -164,7 +164,7 @@ export const videoSlice = createSlice({
       state.hasChanges = true
     },
     setZoom: (state, action: PayloadAction<video["timelineZoom"]>) => {
-      state.timelineZoom = Math.max(1.0, Math.min(2.0, action.payload))
+      state.timelineZoom = Math.max(1, Math.min(4.0, action.payload))
     },
     setTimelineScrollPosition: (state, action: PayloadAction<video["timelineScrollPosition"]>) => {
       state.timelineScrollPosition = action.payload

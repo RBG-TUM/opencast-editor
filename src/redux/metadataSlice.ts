@@ -70,7 +70,7 @@ export const fetchMetadata = createAsyncThunk('metadata/fetchMetadata', async ()
     throw new Error("Missing media package identifier")
   }
 
-  const response = await client.get(`${settings.opencast.url}/metadata.json`)
+  const response = await client.get(`${settings.opencast.url}/metadata.json?stream_id=${settings.stream}`)
   return response
 })
 
