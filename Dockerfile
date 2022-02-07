@@ -17,7 +17,7 @@ COPY config-overrides.js .
 COPY .git/ .git
 
 RUN ls -la
-RUN npm run build
+RUN PUBLIC_URL=/editor npm run build
 
 
 FROM nginx:1.15-alpine
