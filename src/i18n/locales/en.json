@@ -37,7 +37,7 @@
       "time-duration-tooltip": "Playback time and duration",
       "duration-aria": "Duration",
       "time-aria": "Current time",
-      "comError-text": "A problem occurred during communication with Opencast.",
+      "comError-text": "A problem occurred during communication with TUM-Live.",
       "loadError-text": "An error has occurred loading this video.",
       "title-tooltip": "Video Title",
       "presenter-tooltip": "Video Presenters",
